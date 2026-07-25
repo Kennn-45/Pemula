@@ -11,6 +11,8 @@ signed main () {
   for (int i = 0; i < n; i++) {
    cin >> angka[i];
   }
+  sort(angka.begin(), angka.end());
+  cout << angka[0] << " & " << angka[angka.size() - 1] << endl;
  }
  return 0;
 }
