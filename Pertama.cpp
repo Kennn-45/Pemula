@@ -6,5 +6,10 @@ using namespace std;
 
 signed main () {
   cout << "Hello World!" << endl;
+  int a = 2.5;
+  cout << a << endl;
+  for (int i = 1; i <= 10; i++) {
+    cout << "Perulangan ke-" << i << endl;
+  }
   return 0;
 }
