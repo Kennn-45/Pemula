@@ -11,5 +11,8 @@ signed main () {
   for (int i = 1; i <= 10; i++) {
     cout << "Perulangan ke-" << i << endl;
   }
+  int a,b,c;
+  cin >> a >> b >> c;
+  cout << a + b + c << endl;
   return 0;
 }
