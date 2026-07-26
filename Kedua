@@ -7,6 +7,15 @@ signed main () {
  int t; cin >> t;
  while (t--) {
   int n; cin >> n;
+  int plus = 0, minus = 0;
+  for (int i = 0; i < n; i++) {
+   int x; cin >> x;
+   if (x >= 0) plus++;
+   else minus++;
+  }
+  if (plus > minus) cout << "Positif WIN!" << endl;
+  else if (minus > plus) cout << "Negatif WIN!" << endl;
+  else cout << "Seri!" << endl;
   vector<int> angka(n);
   double jumlah = 0;
   for (int i = 0; i < n; i++) {
