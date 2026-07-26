@@ -13,9 +13,19 @@ signed main () {
    if (x >= 0) plus++;
    else minus++;
   }
- if (plus > minus) cout << "Positif WIN!" << endl;
- else if (minus > plus) cout << "Negatif WIN!" << endl;
- else cout << "Seri!" << endl;
+  if (plus > minus) cout << "Positif WIN!" << endl;
+  else if (minus > plus) cout << "Negatif WIN!" << endl;
+  else cout << "Seri!" << endl;
+  vector<int> angka(n);
+  double jumlah = 0;
+  for (int i = 0; i < n; i++) {
+   cin >> angka[i];
+   jumlah += angka[i];
+  }
+  sort(angka.begin(), angka.end());
+  cout << angka[0] << " & " << angka[n-1] << endl;
+  cout << "Selisih nilai Max & Min adalah " << abs(angka[0] - angka[n-1]) << endl;
+  cout << "Mean baris adalah " << fixed << setprecision(2) << jumlah/n << endl;
  }
  return 0;
 }
