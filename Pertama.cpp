@@ -2,17 +2,30 @@
 using namespace std;
 #define int long long
 #define endl '\n'
-#define fastIo ios_base::stdio_with_sync(false) cin.tie(NULL)
 
 signed main () {
-  cout << "Hello World!" << endl;
-  int a = 2.5;
-  cout << a << endl;
-  for (int i = 1; i <= 10; i++) {
-    cout << "Perulangan ke-" << i << endl;
+ int t; cin >> t;
+ while (t--) {
+  int n; cin >> n;
+  int plus = 0, minus = 0;
+  for (int i = 0; i < n; i++) {
+   int x; cin >> x;
+   if (x >= 0) plus++;
+   else minus++;
   }
-  int a,b,c;
-  cin >> a >> b >> c;
-  cout << a + b + c << endl;
-  return 0;
+  if (plus > minus) cout << "Positif WIN!" << endl;
+  else if (minus > plus) cout << "Negatif WIN!" << endl;
+  else cout << "Seri!" << endl;
+  vector<int> angka(n);
+  double jumlah = 0;
+  for (int i = 0; i < n; i++) {
+   cin >> angka[i];
+   jumlah += angka[i];
+  }
+  sort(angka.begin(), angka.end());
+  cout << angka[0] << " & " << angka[n-1] << endl;
+  cout << "Selisih nilai Max & Min adalah " << abs(angka[0] - angka[n-1]) << endl;
+  cout << "Mean baris adalah " << fixed << setprecision(2) << jumlah/n << endl;
+ }
+ return 0;
 }
