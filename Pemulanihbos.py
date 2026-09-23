@@ -6,7 +6,9 @@ for i in range (n):
     x = int(input())
     total += x
 
-print(total)
+print ("input N = ", n, "\t input M = ", m)
+print("Total damage = ", total)
+print ("If damage lebih besar atau sama dengan HP Musuh:")
 if total >= m:
     print("Menang")
 else: print ("Kalah")
